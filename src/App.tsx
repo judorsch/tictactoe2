@@ -16,6 +16,9 @@ function App():JSX.Element {
   const [s9, setSymbol9] = useState<string>("");
   const [end, setEnd] = useState<boolean>(false);
   const [count, setCount] = useState<number>(0);
+  function refreshPage(){
+    window.location.reload();
+  }
   const checkWin = () =>{
     if(s1 !== "" && (s1 === s2) && (s2 === s3)){
       return true;
@@ -69,6 +72,9 @@ function App():JSX.Element {
         <TicButton change={setTurn} textTitle={turn} symbolC={setSymbol7} symbol={s7} end = {end} incr = {setCount} turns = {count}></TicButton>
         <TicButton change={setTurn} textTitle={turn} symbolC={setSymbol8} symbol={s8} end = {end} incr = {setCount} turns = {count}></TicButton>
         <TicButton change={setTurn} textTitle={turn} symbolC={setSymbol9} symbol={s9} end = {end} incr = {setCount} turns = {count}></TicButton>
+      </div>
+      <div>
+        <button id="refreshBut" onClick={refreshPage}>Start Over!</button>
       </div>
     </div>
 
