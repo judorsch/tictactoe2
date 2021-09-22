@@ -71,6 +71,7 @@ p{
 #refreshBut{
   margin-top: 1em;
   background-color:goldenrod;
+  border: 1px solid #241773;
   height:100px;
   width:250px;
   color:#241773;
